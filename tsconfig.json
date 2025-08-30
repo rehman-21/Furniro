@@ -26,8 +26,7 @@
     /* ✅ Alias Config */
     "baseUrl": "src",
     "paths": {
-      "@components/*": ["components/*"],
-      "@constant/*": ["constant/*"]
+     
     }
   },
   "include": ["src"]

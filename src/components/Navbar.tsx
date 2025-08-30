@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { SVG } from "../../constant/Svg";
+import { SVG } from "../constant/Svg";
 import { Link } from "react-router-dom";
-import { GridIcon } from "../../assets/svg";
-import { navbarIcons, navigationMenu } from "../../constant/DummyData";
+import { GridIcon } from "../assets/svg";
+import { navbarIcons, navigationMenu } from "../constant/DummyData";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,7 +64,7 @@ export const Navbar = () => {
               </Link>
             ))}
           </div>
-          <div className="flex mt-4 flex-col gap-5">
+          <div className="flex mt-4 flex-row gap-5">
             {navbarIcons.map((items, index) => (
               <Link to={items.to} key={index}>
                 <img src={items.url} className="w-5" alt={items.alt} />

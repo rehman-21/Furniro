@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
-import { SVG } from "../../constant/Svg";
-import { CustomCard } from "../Card/CustomCard";
+import { SVG } from "../constant/Svg";
+import { CustomCard } from "./CustomCard";
 
 interface CardProps {
   Title: string;

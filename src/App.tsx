@@ -1,12 +1,12 @@
+import { AppRoutes } from "../src/routes";
 import "./App.css";
-import { BrowserRouter } from "react-router-dom";
 import "./index.css";
-import { AppRoutes } from "./constant/Route";
+import { BrowserRouter } from "react-router-dom";
 
 
 
 
-function App() {
+const App=()=> {
   return (
     <BrowserRouter>
         <AppRoutes />

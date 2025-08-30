@@ -1,4 +1,4 @@
-export * from "./Navbar/Navbar";
-export * from "./Hero/Hero";
-export * from "./OurProducts/OurProduct";
+export * from "./Navbar";
+export * from "./Hero";
+export * from "./OurProduct";
 // export * from "./BrowseRange/BrowseRange";

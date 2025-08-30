@@ -1,5 +1,5 @@
-import { BrowseRange } from "../components/BrowseRange/BrowseRange";
-import { HeroSection, Navbar, OurProduct } from "@components/components";
+import { BrowseRange } from "../components/BrowseRange";
+import { HeroSection, Navbar, OurProduct } from "../components/components";
 import { Products, ranges } from "../constant/DummyData";
 
 export const Home = () => {

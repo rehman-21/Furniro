@@ -1,3 +1,4 @@
+import { Button } from "./Button";
 import {
   Card,
   CardContent,
@@ -5,7 +6,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "../ui/card";
+} from "./ui/card";
 
 interface CustomCardProps {
   Title: string;
@@ -28,7 +29,7 @@ export const CustomCard = ({
   return (
     <Card
       className="
-        w-full sm:w-80 md:w-60 lg:w-[30%] 
+        w-full sm:w-80 md:w-90 lg:w-[40%] 
         min-h-[250px] h-[350px] 
         mx-8 
         border-none bg-orange-100 
@@ -52,20 +53,22 @@ export const CustomCard = ({
       </CardContent>
 
       <CardFooter>
-        <button
+        <Button
           className="
             bg-[#b88e3f] 
             w-full sm:w-[200px] 
-            h-12 sm:h-[60px] 
+            h-12 sm:h-[50px] 
             text-white font-bold 
             rounded-md 
             hover:bg-[#a87c2f] transition
+            scale-100 
+            cursor-pointer
+            hover:scale-105 
+
           "
-        >
-          BUY NOW
-        </button>
+          children="BUY NOW"
+        />
       </CardFooter>
     </Card>
   );
 };
-

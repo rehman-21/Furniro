@@ -1,4 +1,5 @@
-import { ProductCard } from "../Card/ProductCard";
+import { Button } from "./Button";
+import { ProductCard } from "./ProductCard";
 
 type Product = {
   id: string;
@@ -36,9 +37,10 @@ export const OurProduct = ({ Products }: OurProductProps) => {
       </div>
 
       <div className="mt-8 flex justify-center">
-        <button className="border border-[#B88E2F] mb-8 px-6 py-2 text-sm w-[17%] font-medium text-[#B88E2F] transition hover:bg-[#B88E2F] hover:text-white">
-          Show More
-        </button>
+        <Button  className="border border-[#B88E2F] mb-8 px-6 py-2 text-sm w-[17%] font-medium text-[#B88E2F] transition hover:bg-[#B88E2F] hover:text-white"
+        children="Show More
+        "
+        />
       </div>
     </section>
   );

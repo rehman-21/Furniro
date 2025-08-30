@@ -1,12 +1,12 @@
-import { Home } from "pages/Home";
+import { Home } from "../src/pages/Home";
 import { Routes, Route } from "react-router-dom";
 
-
-export function AppRoutes() {
+export const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       {/* <Route path="*" element={<NotFoundPage />} /> */}
     </Routes>
   );
-}
+};
+
