@@ -8,6 +8,7 @@ import PinkyImg from '../assets/ProductImg/Pingky.jpg';
 import RespiraImg from '../assets/ProductImg/Respira.jpg';
 import SyltherineImg from '../assets/ProductImg/Syltherine.jpg';
 import PottyImg from '../assets/ProductImg/Potty.jpg';
+import BedroomDenImg from '../assets/ProductImg/BadroomDes.jpg';
 
 
 
@@ -26,5 +27,6 @@ export const JPG = {
     RESPIRA: RespiraImg,
     SYLTHERINE: SyltherineImg,
     POTTY: PottyImg,
+    BEDROOM_DEN: BedroomDenImg
 
 }
