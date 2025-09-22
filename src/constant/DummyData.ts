@@ -30,7 +30,7 @@ export const navbarIcons = [
 
    export const navigationMenu = [
       {
-        path: "/",
+        path: "/home",
         text: "Home",
       },
        {
@@ -137,4 +137,10 @@ export  const ranges = [
     isNew: true,
     image:JPG.POTTY,
   },
+];
+//! =========================> Help Links <==========>
+export const helpLinks = [
+  { text: "Payment Options", path: "/payment-options" },
+  { text: "Returns", path: "/returns" },
+  { text: "Privacy Policies", path: "/privacy-policies" },
 ];

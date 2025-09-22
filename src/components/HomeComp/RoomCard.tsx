@@ -1,5 +1,5 @@
 import type React from "react";
-import { Button } from "./Button";
+import { Button } from "../Commons/Button";
 
 type RoomCardProps = {
   image: string;
@@ -15,7 +15,7 @@ export const RoomCard: React.FC<RoomCardProps> = ({
   title,
 }) => {
   return (
-    <div className="relative aspect-[4/4] w-[100%]  shadow-md">
+    <div className="relative h-full w-[100%] shadow-md">
       {/* Background image */}
       <img src={image} alt={title} className="h-full w-full object-cover" />
 
@@ -31,7 +31,7 @@ export const RoomCard: React.FC<RoomCardProps> = ({
 
       {/* Arrow button */}
       <Button
-        className="absolute bottom-6 left-38 flex h-10 w-10 items-center justify-center  bg-[#B88E2F] text-white shadow hover:bg-[#a27b27] transition"
+        className="absolute bottom-6 left-[152px] flex h-10 w-10 items-center justify-center bg-[#B88E2F] text-white shadow transition hover:bg-[#a27b27]"
       >
         →
       </Button>

@@ -1,4 +1,4 @@
-import { Button } from "./Button";
+import { Button } from "../Commons/Button";
 import {
   Card,
   CardContent,
@@ -6,7 +6,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "./ui/card";
+} from "../ui/card";
 
 interface CustomCardProps {
   Title: string;

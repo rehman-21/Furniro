@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { RoomCard } from "./RoomCard";
-import { JPG } from "../constant/Images";
+import { JPG } from "../../constant/Images";
 
 const rooms = [
   {
@@ -26,6 +26,7 @@ const rooms = [
 
 export const RoomSwiper = () => {
   return (
+    <>
     <Swiper
       modules={[Navigation, Pagination]}
       spaceBetween={30}
@@ -39,5 +40,6 @@ export const RoomSwiper = () => {
         </SwiperSlide>
       ))}
     </Swiper>
+      </>
   );
 }

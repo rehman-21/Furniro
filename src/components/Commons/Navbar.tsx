@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { SVG } from "../constant/Svg";
+import { SVG } from "../../constant/Svg";
 import { Link } from "react-router-dom";
-import { GridIcon } from "../assets/svg";
-import { navbarIcons, navigationMenu } from "../constant/DummyData";
+import { GridIcon } from "../../assets/svg";
+import { navbarIcons, navigationMenu } from "../../constant/DummyData";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

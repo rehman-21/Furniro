@@ -1,10 +1,10 @@
 import type { ReactNode } from "react";
-import { SVG } from "../constant/Svg";
+import { SVG } from "../../constant/Svg";
 import { CustomCard } from "./CustomCard";
 
 interface CardProps {
   Title: string;
-  Title2?: string | ReactNode;
+  Title2?: string |number |ReactNode;
 }
 
 export const HeroSection = ({ Title, Title2 }: CardProps) => {

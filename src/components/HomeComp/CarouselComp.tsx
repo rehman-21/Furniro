@@ -5,16 +5,16 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "../components/ui/carousel"
+} from "../ui/carousel"
 
-import Blue from "../assets/ProductImg/BadroomDes.jpg"
-import Grifo from "../assets/ProductImg/Grifo.jpg"
-import Lolite from "../assets/ProductImg/Lolite.jpg"
-import Pingky from "../assets/ProductImg/Pingky.jpg"
+import Grifo from "../../assets/ProductImg/Grifo.jpg"
+import Lolite from "../../assets/ProductImg/Lolite.jpg"
+import Pingky from "../../assets/ProductImg/Pingky.jpg"
+import Blue from "../../assets/ProductImg/Pingky.jpg"
 
 const images = [Blue, Grifo, Lolite, Pingky]
 
-export const ImageCarousel = () => {
+export const ImageCarousel:React.FC = () => {
   const [api, setApi] = React.useState<any>(null)
   const [selectedIndex, setSelectedIndex] = React.useState(0)
 
@@ -31,15 +31,15 @@ export const ImageCarousel = () => {
   }, [api])
 
   return (
-    <div className="w-full h-screen max-w-[1920px] max-h-[1080px] mx-auto">
+    <div className="w-full h-full mx-auto">
       <Carousel className="relative w-full h-full" setApi={setApi}>
         <CarouselContent>
           {images.map((src, index) => (
-            <CarouselItem key={index} className="flex justify-center">
+            <CarouselItem key={index} className="flex justify-center h-full">
               <img
                 src={src}
                 alt={`Slide ${index + 1}`}
-                className="object-cover w-full h-[calc(100vh-90px)] rounded-xl"
+                className="object-cover w-full h-full "
               />
             </CarouselItem>
           ))}
@@ -53,14 +53,14 @@ export const ImageCarousel = () => {
         {images.map((_, i) => (
           <div
             key={i}
-            className={`border transition rounded-full w-6 h-6 flex justify-center items-center ${
-              selectedIndex === i ? "border-yellow-500" : "border-gray-300"
+            className={`border transition rounded-full w-6 h-6 flex justify-center items-center mt-1 ${
+              selectedIndex === i ? "border-[#B88E2F]" : "border-gray-300"
             }`}
           >
             <button
               onClick={() => api && api.scrollTo(i)}
               className={`w-3 h-3 rounded-full transition ${
-                selectedIndex === i ? "bg-yellow-500" : "bg-gray-300"
+                selectedIndex === i ? "bg-[#B88E2F]" : "bg-gray-300"
               }`}
             />
           </div>

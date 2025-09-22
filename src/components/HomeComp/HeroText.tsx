@@ -1,4 +1,4 @@
-import { Button } from "./Button";
+import { Button } from "../Commons/Button";
 
 export const HeroText = () => {
   return (

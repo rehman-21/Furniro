@@ -1,6 +1,8 @@
 import DinigImg from '../../public/images/Dining.png';
 import livingImg from '../../public/images/Living.png';
 import BedroomImg from '../../public/images/Bedroom.png';
+import Bg_1_Img from '../../public/images/BG_1.jpg';
+import Bg_2_Img from '../../public/images/BG_2.jpg';
 import LoliteImg from '../assets/ProductImg/Lolite.jpg';
 import GrifoImg from '../assets/ProductImg/Grifo.jpg';
 import MuggoImg from '../assets/ProductImg/Muggo.jpg';
@@ -27,6 +29,8 @@ export const JPG = {
     RESPIRA: RespiraImg,
     SYLTHERINE: SyltherineImg,
     POTTY: PottyImg,
-    BEDROOM_DEN: BedroomDenImg
+    BEDROOM_DEN: BedroomDenImg,
+    BG_1:Bg_1_Img,
+    BG_2:Bg_2_Img
 
 }

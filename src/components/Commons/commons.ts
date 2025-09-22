@@ -1,0 +1,6 @@
+export * from "./Navbar"
+export * from "./HeadingTitle"
+export * from "./HomeFooter"
+export * from "./Button"
+export * from "./InputComp"
+export * from "./LabelComp"
