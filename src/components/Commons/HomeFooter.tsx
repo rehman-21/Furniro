@@ -4,14 +4,14 @@ import { SVG } from "../../constant/Svg";
 
 export const HomeFooter = () => {
   return (
+    <>
     <footer className="w-full border-t border-gray-200">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-16 py-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-10">
           {/* Brand + Address */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <img src={SVG.LOGO_IMG} alt="Funiro" className="w-10 h-10" />
-              <h3 className="text-2xl font-bold font-Poppins">Funiro.</h3>
+              <h3 className="text-2xl font-bold font-Poppins mb-10">Funiro.</h3>
             </div>
             <p className="text-sm text-gray-500 max-w-xs leading-relaxed">
               400 University Drive Suite 200 Coral Gables,
@@ -21,7 +21,7 @@ export const HomeFooter = () => {
 
           {/* Links */}
           <div className="flex flex-col gap-3">
-            <h4 className="uppercase tracking-wide text-gray-500 text-sm font-medium">
+            <h4 className="uppercase tracking-wide text-gray-500 text-sm font-medium mb-10">
               Links
             </h4>
             {navigationMenu.map((menu, index) => (
@@ -37,7 +37,7 @@ export const HomeFooter = () => {
 
           {/* Help */}
           <div className="flex flex-col gap-3">
-            <h4 className="uppercase tracking-wide text-gray-500 text-sm font-medium">
+            <h4 className="uppercase tracking-wide text-gray-500 text-sm font-medium mb-10">
               Help
             </h4>
             <ul className="flex flex-col gap-3 text-sm font-medium">
@@ -51,9 +51,8 @@ export const HomeFooter = () => {
             </ul>
           </div>
 
-          {/* Newsletter */}
           <div className="flex flex-col gap-5">
-            <h4 className="uppercase tracking-wide text-gray-500 text-sm font-medium">
+            <h4 className="uppercase tracking-wide text-gray-500 text-sm font-medium mb-5">
               Newsletter
             </h4>
             <form
@@ -75,7 +74,6 @@ export const HomeFooter = () => {
           </div>
         </div>
 
-        {/* bottom line */}
         <div className="mt-10 border-t border-gray-200 pt-6">
           <p className="text-xs sm:text-sm text-gray-500">
             2023 Funiro. All rights reserved.
@@ -83,5 +81,7 @@ export const HomeFooter = () => {
         </div>
       </div>
     </footer>
+    </>
+
   );
 };

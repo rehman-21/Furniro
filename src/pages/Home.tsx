@@ -1,4 +1,3 @@
-import { Navbar,HomeFooter } from "../components/Commons/commons";
 import {
   BrowseRange,
   HeroSection,
@@ -15,7 +14,6 @@ export const Home = () => {
   return (
     <>
       <div>
-        <Navbar />
         <HeroSection
           Title={"New Arrival"}
           Title2={
@@ -39,7 +37,6 @@ export const Home = () => {
         <section>
           <FurnitureComp />
         </section>
-        <HomeFooter />
       </div>
     </>
   );
