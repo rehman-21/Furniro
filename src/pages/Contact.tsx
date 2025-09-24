@@ -1,24 +1,32 @@
-import React from 'react'
-import { PageHeader } from '../components/Commons/HeadingTitle'
+import React from "react";
+import { HeadingTitle, PageHeader } from "../components/Commons/HeadingTitle";
+import {
+  ContactForm,
+  ContactInfo,
+  ServiceHighlights,
+} from "../components/components";
 
-export const Contact:React.FC = () => {
+export const Contact: React.FC = () => {
   return (
     <>
-    <div>
+      <div>
         <PageHeader title="Contact" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-10 grid md:grid-cols-2 gap-8">
-          <div>
-            <h2 className="text-xl font-semibold mb-3">Get in touch</h2>
-            <form className="space-y-4">
-              <input className="w-full border rounded-md px-3 py-2" placeholder="Your name" />
-              <input className="w-full border rounded-md px-3 py-2" placeholder="Your email" />
-              <textarea className="w-full border rounded-md px-3 py-2 h-28" placeholder="Message" />
-              <button className="px-4 py-2 bg-black text-white rounded-md">Send</button>
-            </form>
-          </div>
-          <div className="bg-gray-100 rounded-lg h-56 md:h-72" />
+        <HeadingTitle
+          title="Get In Touch With Us"
+          className="text-3xl font-bold my-4 text-center"
+        />
+        <p className="text-center md:text-center mb-10 px-10 text-gray-500 text-xxl text-ellipsis">
+          For More Information About Our Product & Services. Please Feel Free To
+          Drop Us <br /> An Email. Our Staff Always Be There To Help You Out. Do
+          Not Hesitate!.
+        </p>
+
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-16 py-10 grid md:grid-cols-2 gap-8">
+            <ContactInfo />
+            <ContactForm />
         </div>
-    </div>
+        <ServiceHighlights />
+      </div>
     </>
-  )
-}
+  );
+};

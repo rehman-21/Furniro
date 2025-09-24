@@ -11,7 +11,7 @@ export const Navbar = () => {
     <nav className="bg-gray-200">
       <div className="w-[100%] px-4 sm:px-6 lg:px-16">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
+         // ~{/* <================== [ NAVBAR LOGO ] ==============> */}
           <div className="flex gap-3 items-center">
             <img src={SVG.LOGO_IMG} alt="Logo" className="w-10 h-10" />
             <h1 className="text-black font-bold text-2xl font-Poppins">
@@ -19,7 +19,7 @@ export const Navbar = () => {
             </h1>
           </div>
 
-          {/* Desktop Menu */}
+         //~ {/* <================== [ NAVBAR MENU ] ==============> */}
           <div className="hidden lg:flex gap-14 m-4">
             {navigationMenu.map((menu, index) => (
               <Link
@@ -32,7 +32,7 @@ export const Navbar = () => {
             ))}
           </div>
 
-          {/* Desktop Icons */}
+          //~{/* <================== [ NAVBAR ICONS ] ==============> */}
           <div className="hidden lg:flex gap-12 items-center">
             {navbarIcons.map((items, index) => (
               <Link to={items.to} key={index}>
@@ -41,7 +41,7 @@ export const Navbar = () => {
             ))}
           </div>
 
-          {/* Mobile Hamburger */}
+          //~{/* <================== [ MOBILE HAMBURGER ] ==============> */}
           <div className="md:hidden">
             <button onClick={() => setIsOpen(!isOpen)}>
               <GridIcon isOpen={isOpen} />
@@ -50,7 +50,7 @@ export const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+     //~ {/* <================== [ MOBILE MENU ] ==============> */}
       {isOpen && (
         <div className="md:hidden bg-gray-100 px-4 pb-4 space-y-2">
           <div className="flex flex-col gap-3">
@@ -76,4 +76,3 @@ export const Navbar = () => {
     </nav>
   );
 };
-
