@@ -30,7 +30,7 @@ export const ContactInfo: React.FC = () => {
       <div>
         {Information.map((item) => (
           <div key={item.id} className="flex items-start mb-6">
-            <div className="text-2xl text-black mr-6 pt-2 mb-20">
+            <div className="text-2xl text-black mr-6 pt-1 mb-20">
               {item.icon}
             </div>
             <div>

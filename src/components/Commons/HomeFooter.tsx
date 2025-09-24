@@ -9,7 +9,7 @@ export const HomeFooter = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-10">
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                //~ {/* <================== [ FOOTER LOGO ] ==============> */}
+                {/* <================== [ FOOTER LOGO ] ==============> */}
                 <h3 className="text-2xl font-bold font-Poppins mb-10">
                   Funiro.
                 </h3>
@@ -19,7 +19,7 @@ export const HomeFooter = () => {
                 <br /> FL 33134 USA
               </p>
             </div>
-            //~ {/* <================== [ FOOTER LINKS ] ==============> */}
+            {/* <================== [ FOOTER LINKS ] ==============> */}
             <div className="flex flex-col gap-8">
               <h4 className="uppercase tracking-wide text-gray-500 text-sm font-medium mb-10">
                 Links
@@ -34,7 +34,7 @@ export const HomeFooter = () => {
                 </Link>
               ))}
             </div>
-            //~ {/* <================== [ FOOTER HELP ] ==============> */}
+            {/* <================== [ FOOTER HELP ] ==============> */}
             <div className="flex flex-col gap-5">
               <h4 className="uppercase tracking-wide text-gray-500 text-sm font-medium mb-10">
                 Help
@@ -50,7 +50,7 @@ export const HomeFooter = () => {
               </ul>
             </div>
            
-            //~{/* <================== [ FOOTER NEWS LETTER ] ==============> */}
+            {/* <================== [ FOOTER NEWS LETTER ] ==============> */}
             <div className="flex flex-col gap-5">
               <h4 className="uppercase tracking-wide text-gray-500 text-sm font-medium mb-5">
                 Newsletter
