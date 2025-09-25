@@ -1,9 +1,17 @@
-import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
-import auth, { FirebaseAuthTypes } from '@react-native-firebase/auth';
-import firestore from '@react-native-firebase/firestore';
+import React, { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
+import { auth, db } from '../firebase';
+import {
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  updateProfile,
+  signOut,
+  type User as FirebaseUser,
+} from 'firebase/auth';
+import { doc, serverTimestamp, setDoc } from 'firebase/firestore';
 
 interface AuthContextType {
-  user: FirebaseAuthTypes.User | null;
+  user: FirebaseUser | null;
   isAuthenticated: boolean;
   loading: boolean;
   login: (email: string, password: string) => Promise<void>;
@@ -18,12 +26,12 @@ interface AuthContextProviderProps {
 }
 
 const AuthContextProvider: React.FC<AuthContextProviderProps> = ({ children }) => {
-  const [user, setUser] = useState<FirebaseAuthTypes.User | null>(null);
+  const [user, setUser] = useState<FirebaseUser | null>(null);
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    const unsubscribe = auth().onAuthStateChanged(async (currentUser) => {
+    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       if (currentUser) {
         setUser(currentUser);
         setIsAuthenticated(true);
@@ -39,20 +47,18 @@ const AuthContextProvider: React.FC<AuthContextProviderProps> = ({ children }) =
 
   const signUp = async (userName: string, email: string, password: string) => {
     try {
-      const userCredential = await auth().createUserWithEmailAndPassword(email, password);
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const newUser = userCredential.user;
 
-      // Update Firebase Auth profile
-      await newUser.updateProfile({ displayName: userName });
+      await updateProfile(newUser, { displayName: userName });
 
-      // Save to Firestore
-      await firestore().collection('users').doc(newUser.uid).set({
+      await setDoc(doc(db, 'users', newUser.uid), {
         name: userName,
         email,
-        createdAt: firestore.FieldValue.serverTimestamp(),
+        createdAt: serverTimestamp(),
       });
 
-      setUser(newUser);
+      setUser(auth.currentUser);
       setIsAuthenticated(true);
     } catch (err: any) {
       console.error("Sign Up Error:", err.message);
@@ -62,7 +68,7 @@ const AuthContextProvider: React.FC<AuthContextProviderProps> = ({ children }) =
 
   const login = async (email: string, password: string) => {
     try {
-      const userCredential = await auth().signInWithEmailAndPassword(email, password);
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
       setUser(userCredential.user);
       setIsAuthenticated(true);
     } catch (err: any) {
@@ -72,7 +78,7 @@ const AuthContextProvider: React.FC<AuthContextProviderProps> = ({ children }) =
 
   const logOut = async () => {
     try {
-      await auth().signOut();
+      await signOut(auth);
       setUser(null);
       setIsAuthenticated(false);
     } catch (err: any) {

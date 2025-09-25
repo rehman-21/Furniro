@@ -18,11 +18,11 @@ interface OurProductProps {
   Products: Product[];
 }
 
-export const OurProduct = ({ Products }: OurProductProps) => {
+export const OurProduct: React.FC<OurProductProps> = ({ Products }: OurProductProps) => {
   const navigate = useNavigate();
 
   const handleNavigateToShop = () => {
-    navigate("/shop"); // 👈 make sure this route exists in your router
+    navigate("/shop"); 
   };
 
   return (

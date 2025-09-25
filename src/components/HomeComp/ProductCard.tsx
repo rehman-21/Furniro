@@ -1,6 +1,7 @@
 import { FaShareAlt } from "react-icons/fa";
 import { GoArrowSwitch } from "react-icons/go";
 import { AiFillHeart } from "react-icons/ai";
+import type React from "react";
 
 type ProductCardProps = {
   imageSrc: string;
@@ -12,7 +13,7 @@ type ProductCardProps = {
   discountPercent?: number;
 };
 
-export const ProductCard = ({
+export const ProductCard: React.FC<ProductCardProps> = ({
   imageSrc,
   title,
   subtitle,
@@ -60,13 +61,11 @@ export const ProductCard = ({
         </div>
       </div>
 
-      {/* Hover actions */}
       <div className="pointer-events-none absolute inset-0 hidden flex-col items-center justify-center bg-black/40 group-hover:flex">
         <div className="pointer-events-auto flex flex-col items-center gap-3">
           <button className="rounded-sm bg-white px-6 py-2 text-xs font-semibold text-[#B88E2F] shadow-sm transition hover:bg-neutral-100">
             Add to cart
           </button>
-
           <div className="flex items-center gap-6 text-white text-lg">
             <button className="flex items-center gap-2 hover:text-[#B88E2F]">
               <FaShareAlt size={12} />
@@ -88,4 +87,3 @@ export const ProductCard = ({
     </div>
   );
 };
-
