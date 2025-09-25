@@ -20,7 +20,7 @@ export const Login: React.FC = () => {
   });
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  console.log(formData,"formdata............")
+  
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
