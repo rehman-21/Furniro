@@ -38,7 +38,6 @@ export const Shop: React.FC = () => {
           ))}
         </div>
 
-        {/* Pagination Controls */}
         <div className="flex justify-center mt-10 space-x-2">
           {Array.from({ length: totalPages }, (_, i) => (
             <button

@@ -20,6 +20,7 @@ export const Login: React.FC = () => {
   });
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  console.log(formData,"formdata............")
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -122,7 +123,7 @@ export const Login: React.FC = () => {
         {/* Footer */}
         <p className="mt-6 text-center text-sm text-gray-500">
           Don’t have an account?{" "}
-          <Link to="/" className="text-yellow-600 font-medium hover:underline">
+          <Link to="/signup" className="text-yellow-600 font-medium hover:underline">
             Sign Up
           </Link>
         </p>

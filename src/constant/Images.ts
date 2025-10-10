@@ -11,13 +11,14 @@ import RespiraImg from '../assets/ProductImg/Respira.jpg';
 import SyltherineImg from '../assets/ProductImg/Syltherine.jpg';
 import PottyImg from '../assets/ProductImg/Potty.jpg';
 import BedroomDenImg from '../assets/ProductImg/BadroomDes.jpg';
+import SofaImg from '../assets/ProductImg/Sofa.png';
 
 
 
 export const PNG = {
-DIINING_IMG:DinigImg,
-LIVING_IMG:livingImg,
-BEDROOM_IMG:BedroomImg,
+    DIINING_IMG:DinigImg,
+    LIVING_IMG:livingImg,
+    BEDROOM_IMG:BedroomImg,
 }
 
 
@@ -31,6 +32,7 @@ export const JPG = {
     POTTY: PottyImg,
     BEDROOM_DEN: BedroomDenImg,
     BG_1:Bg_1_Img,
-    BG_2:Bg_2_Img
+    BG_2:Bg_2_Img,
+    SOFA_IMG:SofaImg
 
 }

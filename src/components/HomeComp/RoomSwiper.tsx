@@ -27,19 +27,18 @@ const rooms = [
 export const RoomSwiper = () => {
   return (
     <>
-    <Swiper
-      modules={[Navigation, Pagination]}
-      spaceBetween={30}
-      slidesPerView={2}
-      navigation
-      pagination={{ clickable: true }}
-      className="max-w-3xl"
-    >
-      {rooms.map((room, idx) => (
-        <SwiperSlide className="flex-row" key={idx}>
-        </SwiperSlide>
-      ))}
-    </Swiper>
-      </>
+      <Swiper
+        modules={[Navigation, Pagination]}
+        spaceBetween={30}
+        slidesPerView={2}
+        navigation
+        pagination={{ clickable: true }}
+        className="max-w-3xl"
+      >
+        {rooms.map((room, idx) => (
+          <SwiperSlide className="flex-row" key={idx}></SwiperSlide>
+        ))}
+      </Swiper>
+    </>
   );
-}
+};

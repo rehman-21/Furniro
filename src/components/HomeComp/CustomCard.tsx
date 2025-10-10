@@ -27,8 +27,9 @@ export const CustomCard = ({
   ...props
 }: CustomCardProps) => {
   return (
-    <Card
-      className="
+    <>
+      <Card
+        className="
         w-full sm:w-80 md:w-90 lg:w-[40%] 
         min-h-[250px] h-[350px] 
         mx-8 
@@ -36,25 +37,25 @@ export const CustomCard = ({
         flex flex-col justify-center
         p-5
       "
-      {...props}
-    >
-      <CardHeader>
-        <CardTitle className="text-base md:text-lg font-poppins ">
-          {Title}
-        </CardTitle>
-        <CardTitle className="text-2xl md:text-4xl text-[#b88e2f] font-poppins font-bold">
-          {Title2}
-        </CardTitle>
-      </CardHeader>
+        {...props}
+      >
+        <CardHeader>
+          <CardTitle className="text-base md:text-lg font-poppins ">
+            {Title}
+          </CardTitle>
+          <CardTitle className="text-2xl md:text-4xl text-[#b88e2f] font-poppins font-bold">
+            {Title2}
+          </CardTitle>
+        </CardHeader>
 
-      <CardContent>
-        {Description && <CardDescription>{Description}</CardDescription>}
-        {Content && <p className="mt-2 text-sm md:text-base">{Content}</p>}
-      </CardContent>
+        <CardContent>
+          {Description && <CardDescription>{Description}</CardDescription>}
+          {Content && <p className="mt-2 text-sm md:text-base">{Content}</p>}
+        </CardContent>
 
-      <CardFooter>
-        <Button
-          className="
+        <CardFooter>
+          <Button
+            className="
             bg-[#b88e3f] 
             w-full sm:w-[200px] 
             h-12 sm:h-[50px] 
@@ -66,9 +67,10 @@ export const CustomCard = ({
             hover:scale-105 
 
           "
-          children="BUY NOW"
-        />
-      </CardFooter>
-    </Card>
+            children="BUY NOW"
+          />
+        </CardFooter>
+      </Card>
+    </>
   );
 };

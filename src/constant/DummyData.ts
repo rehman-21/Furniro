@@ -30,7 +30,7 @@ export const navbarIcons = [
 
    export const navigationMenu = [
       {
-        path: "/home",
+        path: "/",
         text: "Home",
       },
        {

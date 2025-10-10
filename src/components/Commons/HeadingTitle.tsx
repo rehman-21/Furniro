@@ -21,6 +21,7 @@ interface PageHeaderProps {
 
 export const PageHeader: React.FC<PageHeaderProps> = ({ title,to }) => {
   return (
+    <>
     <section
       className="relative w-full h-[250px] md:h-[300px] bg-cover bg-center flex items-center justify-center"
       style={{ backgroundImage: `url(/images/BG_2.jpg)` }}
@@ -45,5 +46,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({ title,to }) => {
         </div>
       </div>
     </section>
+    </>
+
   );
 };

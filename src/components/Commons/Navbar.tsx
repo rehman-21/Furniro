@@ -8,6 +8,7 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
+    <>
     <nav className="bg-gray-200">
       <div className="w-[100%] px-4 sm:px-6 lg:px-16">
         <div className="flex justify-between items-center h-16">
@@ -74,5 +75,7 @@ export const Navbar = () => {
         </div>
       )}
     </nav>
+    </>
+
   );
 };
