@@ -5,7 +5,7 @@ export const About:React.FC = () => {
   return (
     <>
     <div>
-      <PageHeader title="About" />
+      <PageHeader title="About" to="/about" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-10 grid md:grid-cols-2 gap-8">
         <div>
           <h2 className="text-xl font-semibold mb-3">Our Story</h2>

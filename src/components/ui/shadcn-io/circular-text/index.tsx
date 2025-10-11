@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import { motion, useAnimation, useMotionValue, MotionValue, Transition } from 'motion/react';
+import { motion, useAnimation, useMotionValue, MotionValue, type Transition } from 'motion/react';
 
 interface CircularTextProps {
   text: string;

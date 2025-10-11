@@ -4,6 +4,17 @@
 import { JPG, PNG } from "./Images";
 import { Icons } from "./Svg";
 
+type Product = {
+  id: string;
+  title: string;
+  subtitle: string;
+  price: string;
+  oldPrice?: string;
+  isNew?: boolean;
+  discountPercent?: number;
+  image: string;
+};
+
 export const navbarIcons = [
     {
       to: "/",
@@ -321,8 +332,3 @@ export const helpLinks = [
   { text: "Privacy Policies", path: "/privacy-policies" },
 ];
 //! =========================>  <==========>
-
-import { GrTrophy } from "react-icons/gr";
-import { GoVerified } from "react-icons/go";
-
-

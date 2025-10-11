@@ -19,7 +19,7 @@ export const Shop: React.FC = () => {
 
   return (
     <div>
-      <PageHeader title="Shop" />
+      <PageHeader title="Shop" to="/shop" />
       <FilterSection />
 
       <section className="w-full px-10 py-8">

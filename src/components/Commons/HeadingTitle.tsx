@@ -16,7 +16,7 @@ export const HeadingTitle: React.FC<HeadingTitleProps> = ({
 
 interface PageHeaderProps {
   title: string;
-  to: To;
+  to: string;
 }
 
 export const PageHeader: React.FC<PageHeaderProps> = ({ title,to }) => {

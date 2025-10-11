@@ -1,6 +1,5 @@
 import React from "react";
 import {  FaShippingFast, FaHeadset } from "react-icons/fa";
-import { MdVerifiedUser } from "react-icons/md";
 import { GrTrophy } from "react-icons/gr";
 import { GoVerified } from "react-icons/go";
 

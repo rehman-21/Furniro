@@ -10,7 +10,7 @@ export const Contact: React.FC = () => {
   return (
     <>
       <div>
-        <PageHeader title="Contact" />
+        <PageHeader title="Contact" to="/contact" />
         <HeadingTitle
           title="Get In Touch With Us"
           className="text-3xl font-bold my-4 text-center"

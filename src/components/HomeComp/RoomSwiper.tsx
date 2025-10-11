@@ -1,6 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-import { RoomCard } from "./RoomCard";
 import { JPG } from "../../constant/Images";
 
 const rooms = [
@@ -35,7 +34,7 @@ export const RoomSwiper = () => {
         pagination={{ clickable: true }}
         className="max-w-3xl"
       >
-        {rooms.map((room, idx) => (
+        {rooms.map((_, idx) => (
           <SwiperSlide className="flex-row" key={idx}></SwiperSlide>
         ))}
       </Swiper>

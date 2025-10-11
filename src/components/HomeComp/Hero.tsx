@@ -16,7 +16,7 @@ export const HeroSection = ({ Title, Title2 }: CardProps) => {
       >
         <CustomCard
           Title={Title}
-          Title2={Title2}
+          Title2={Title2 as string}
           Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."
         />
       </section>

@@ -9,6 +9,7 @@ interface InputProp {
   value?: string | number;
   required: boolean;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  id?: string;
 }
 
 export const CustomInput: React.FC<InputProp> = ({
@@ -18,7 +19,8 @@ export const CustomInput: React.FC<InputProp> = ({
   placeholder,
   value,
   onChange,
-  required
+  required,
+  id
 }) => {
   return (
     <>
@@ -30,7 +32,7 @@ export const CustomInput: React.FC<InputProp> = ({
         value={value}
         onChange={onChange}
         required={required}
-      
+        id={id}
       />
     </>
   );
