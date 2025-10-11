@@ -1,4 +1,4 @@
-export const GridIcon = ({ isOpen }) => {
+export const GridIcon = ({ isOpen }: { isOpen: boolean }) => {
   return (
     <svg
       className="w-6 h-6 text-black"

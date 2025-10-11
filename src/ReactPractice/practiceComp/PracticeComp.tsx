@@ -1,10 +1,17 @@
 import { useState } from 'react'
 import './App.css'
-import Button from './components/Button/Button'
-import CustomCard from './components/Card/CustomCard'
+import { Button } from '../../components/Button'
+import { CustomCard } from '../../components/CustomCard'
+
+interface Post {
+  id: number;
+  title: string;
+  body: string;
+  userId: number;
+}
 
 function Comp() {
-    const [data, setData] = useState([])
+    const [data, setData] = useState<Post[]>([])
 
     async function getData() {
         const response = await fetch('https://jsonplaceholder.typicode.com/posts')
@@ -20,6 +27,7 @@ function Comp() {
                         <CustomCard
                             key={item.id}
                             Title={item.title}
+                            Title2={`Post ${item.id}`}
                             Description={`Post ID: ${item.id}`}
                             Content={item.body}
                             Footer={`User ID: ${item.userId}`}
@@ -35,4 +43,4 @@ function Comp() {
     )
 }
 
-export default comp
+export default Comp

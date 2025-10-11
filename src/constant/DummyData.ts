@@ -4,6 +4,17 @@
 import { JPG, PNG } from "./Images";
 import { Icons } from "./Svg";
 
+type Product = {
+  id: string;
+  title: string;
+  subtitle: string;
+  price: string;
+  oldPrice?: string;
+  isNew?: boolean;
+  discountPercent?: number;
+  image: string;
+};
+
 export const navbarIcons = [
     {
       to: "/",
