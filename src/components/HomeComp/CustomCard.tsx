@@ -10,7 +10,7 @@ import {
 
 interface CustomCardProps {
   Title: string;
-  Title2: string;
+  Title2: string | React.ReactNode;
   Description?: string;
   Action?: React.ReactNode;
   Content?: string;
