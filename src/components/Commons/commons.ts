@@ -1,0 +1,8 @@
+export * from "./Navbar"
+export * from "./HeadingTitle"
+export * from "./HomeFooter"
+export * from "./Button"
+export * from "./InputComp"
+export * from "./LabelComp"
+export * from "./ServiceHighlights"
+export { default as BeatLoader } from "./BeatLoader"

@@ -1,5 +1,5 @@
 import LogoImg from "../assets/ImageSvg/MainLogo.svg";
-import BgImg from "../assets/ImageSvg/BGImg.svg";
+import BgImg from "../assets/ImageSvg/BgImg.svg";
 import  Heart_Icon  from "../assets/IconSvg/HeartIcon.svg"
 import  Search_Icon  from "../assets/IconSvg/SearchIcon.svg"
 import  Shop_Icon  from "../assets/IconSvg/ShopWheel.svg"

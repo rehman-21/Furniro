@@ -1,7 +1,12 @@
 import { useState } from 'react'
 import './App.css'
+<<<<<<< HEAD
 import { Button } from '../../components/Button'
 import { CustomCard } from '../../components/CustomCard'
+=======
+import { Button } from '../../components/Commons/Button'
+import { ProductCard } from '../../components/HomeComp/ProductCard'
+>>>>>>> Dev
 
 interface Post {
   id: number;
@@ -24,13 +29,20 @@ function Comp() {
             <div className='p-10  flex flex-col justify-center items-center gap-4 overflow-auto'>
                 <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4'>
                     {data.map(item => (
-                        <CustomCard
+                        <ProductCard
                             key={item.id}
+<<<<<<< HEAD
                             Title={item.title}
                             Title2={`Post ${item.id}`}
                             Description={`Post ID: ${item.id}`}
                             Content={item.body}
                             Footer={`User ID: ${item.userId}`}
+=======
+                            imageSrc="/images/BG_1.jpg"
+                            title={item.title}
+                            subtitle={`Post ID: ${item.id}`}
+                            price={`User ID: ${item.userId}`}
+>>>>>>> Dev
                         />
                     ))}
 
