@@ -127,6 +127,7 @@ export const Login: React.FC = () => {
             Sign Up
           </Link>
         </p>
+        {/* ============================> { Footer } ============================> */}
       </div>
     </div>
   );
